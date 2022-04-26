@@ -1,6 +1,11 @@
 /**
  * TODO: Exercise 1: use `fetch` & async/await to get data from an API
  */
+export async function asyncGetQuotes(){
+  const res = await fetch('https://futuramaapi.herokuapp.com/api/quotes/1');
+  const result = await res.json();
+  return (result);
+}
 
 /**
  * TODO: Exercise 2: use `fetch` & `.then` syntax to get the same data from the first exercise.
